@@ -5,12 +5,14 @@ import 'package:submission_booking_hotel_app/layout/navbar_bottom.dart';
 import 'package:submission_booking_hotel_app/model/hotel.dart';
 
 class MainScreen extends StatelessWidget {
-  const MainScreen({super.key});
+  final String username;
+
+  const MainScreen({super.key, required this.username});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: Header(),
+      appBar: Header(username: username),
       body: SafeArea(
         child: Stack(
           children: <Widget>[

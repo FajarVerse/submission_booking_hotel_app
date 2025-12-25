@@ -241,7 +241,6 @@ class DetailScreen extends StatelessWidget {
                     ),
                     SizedBox(
                       height: 50,
-                      width: 120,
 
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(30),
@@ -253,7 +252,7 @@ class DetailScreen extends StatelessWidget {
                               "Book Now",
                               style: TextStyle(
                                 color: Colors.black,
-                                fontSize: 14,
+                                fontSize: 15,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),

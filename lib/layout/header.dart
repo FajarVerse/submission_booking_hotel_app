@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget implements PreferredSizeWidget {
-  const Header({super.key});
+  final String username;
+
+  const Header({super.key, required this.username});
 
   @override
   Size get preferredSize => const Size.fromHeight(250);
@@ -46,6 +48,14 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
                                 Icons.account_circle,
                                 color: Colors.white,
                                 size: 35,
+                              ),
+                              Text(
+                                username,
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 15,
+                                ),
                               ),
                             ],
                           ),
