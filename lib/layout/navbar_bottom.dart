@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:submission_booking_hotel_app/login_screen.dart';
+import 'package:submission_booking_hotel_app/main_screen.dart';
 import 'package:submission_booking_hotel_app/model/navbar_menu.dart';
 
 class NavbarBottom extends StatelessWidget {
@@ -21,14 +22,23 @@ class NavbarBottom extends StatelessWidget {
           children: navbarMenu.map((item) {
             return InkWell(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return LoginScreen();
-                    },
-                  ),
-                );
+                if (item.menu == 'Discover') {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => MainScreen()),
+                  );
+                } else if (item.menu == 'Bookings') {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => MainScreen()),
+                  );
+                } else if (item.menu == 'Logout') {
+                  Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(builder: (_) => LoginScreen()),
+                    (route) => false,
+                  );
+                }
               },
               child: Column(
                 children: <Widget>[

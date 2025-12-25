@@ -7,7 +7,7 @@ import 'package:submission_booking_hotel_app/model/hotel.dart';
 class MainScreen extends StatelessWidget {
   final String username;
 
-  const MainScreen({super.key, required this.username});
+  const MainScreen({super.key, this.username = ''});
 
   @override
   Widget build(BuildContext context) {
