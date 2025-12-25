@@ -10,5 +10,5 @@ class NavbarMenu {
 var navbarMenu = [
   NavbarMenu(menu: 'Discover', icon: Icons.explore_outlined),
   NavbarMenu(menu: 'Bookings', icon: Icons.book_online_outlined),
-  NavbarMenu(menu: 'Favorite', icon: Icons.favorite_outline),
+  NavbarMenu(menu: 'Logout', icon: Icons.logout),
 ];

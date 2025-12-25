@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:submission_booking_hotel_app/login_screen.dart';
 import 'package:submission_booking_hotel_app/model/navbar_menu.dart';
 
 class NavbarBottom extends StatelessWidget {
@@ -18,14 +19,26 @@ class NavbarBottom extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: navbarMenu.map((item) {
-            return Column(
-              children: <Widget>[
-                Icon(item.icon, size: 20, color: Colors.white),
-                Text(
-                  item.menu,
-                  style: TextStyle(color: Colors.white, fontSize: 12),
-                ),
-              ],
+            return InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return LoginScreen();
+                    },
+                  ),
+                );
+              },
+              child: Column(
+                children: <Widget>[
+                  Icon(item.icon, size: 20, color: Colors.white),
+                  Text(
+                    item.menu,
+                    style: TextStyle(color: Colors.white, fontSize: 12),
+                  ),
+                ],
+              ),
             );
           }).toList(),
         ),

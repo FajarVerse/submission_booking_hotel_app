@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:submission_booking_hotel_app/main_screen.dart';
 
 class LoginScreen extends StatefulWidget {
