@@ -42,22 +42,28 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
                         mainAxisAlignment: MainAxisAlignment.end,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Column(
-                            children: <Widget>[
-                              Icon(
-                                Icons.account_circle,
-                                color: Colors.white,
-                                size: 35,
-                              ),
-                              Text(
-                                username,
-                                style: TextStyle(
+                          SizedBox(
+                            width: 80,
+                            child: Column(
+                              children: <Widget>[
+                                Icon(
+                                  Icons.account_circle,
                                   color: Colors.white,
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 15,
+                                  size: 35,
                                 ),
-                              ),
-                            ],
+
+                                Text(
+                                  username,
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 15,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
